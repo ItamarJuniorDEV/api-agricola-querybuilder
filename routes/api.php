@@ -16,7 +16,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     
     // Produtos
-    Route::get('/produtos', [ProdutoController::class, 'index']);
+    Route::get('/produtos', [ProdutoController::class, 'listar']);
     Route::post('/produtos', [ProdutoController::class, 'store']);
     Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
     Route::get('/produtos/{id}/historico', [ProdutoController::class, 'historico']);
